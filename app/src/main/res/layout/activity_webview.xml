@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/rl_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+        <Button
+                android:id="@+id/btn_change_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="切换加载文件"/>
+
+        <LinearLayout
+                android:id="@+id/ll_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_change_file"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+            <RadioGroup
+                    android:id="@+id/rg_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <RadioButton
+                        android:id="@+id/rb_word"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="word文件"/>
+
+                <RadioButton
+                        android:id="@+id/rb_excel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Excel文件"/>
+
+                <RadioButton
+                        android:id="@+id/rb_power"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PowerPoint文件"/>
+
+                <RadioButton
+                        android:id="@+id/rb_pdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PDF文件"/>
+
+                <RadioButton
+                        android:id="@+id/rb_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WinZip文件"/>
+
+                <RadioButton
+                        android:id="@+id/rb_wps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WPS文件"/>
+
+                <RadioButton
+                        android:id="@+id/rb_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="txt文件"/>
+            </RadioGroup>
+
+            <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="确定"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <WebView
+            android:id="@+id/web_h5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_change"/>
+
+    <ProgressBar
+            android:id="@+id/pb_loading"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_below="@+id/rl_change"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/indicator_process_loading"
+            android:secondaryProgress="0"/>
+
+</RelativeLayout>
